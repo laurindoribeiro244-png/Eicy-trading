@@ -1,0 +1,120 @@
+/* ============================================
+   ANIMATIONS.CSS — Eicy Trading
+   Animações de scroll profissionais
+   Não interfere com nenhuma funcionalidade
+   ============================================ */
+
+/* --- Base: elementos ficam invisíveis antes de entrar na viewport --- */
+.anim-fade-up,
+.anim-fade-left,
+.anim-fade-right,
+.anim-zoom-in,
+.anim-fade-in {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.anim-fade-up    { transform: translateY(40px); }
+.anim-fade-left  { transform: translateX(-50px); }
+.anim-fade-right { transform: translateX(50px); }
+.anim-zoom-in    { transform: scale(0.92); }
+.anim-fade-in    { transform: none; }
+
+/* --- Quando o JS adiciona .anim-visible --- */
+.anim-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* --- Delays em cascata para grupos de elementos --- */
+.anim-delay-1 { transition-delay: 0.1s; }
+.anim-delay-2 { transition-delay: 0.2s; }
+.anim-delay-3 { transition-delay: 0.3s; }
+.anim-delay-4 { transition-delay: 0.4s; }
+.anim-delay-5 { transition-delay: 0.5s; }
+
+/* --- Linha decorativa animada nos títulos --- */
+.section-header h2 {
+  position: relative;
+  display: inline-block;
+}
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60px;
+  height: 3px;
+  background: var(--yellow, #fbbf24);
+  border-radius: 2px;
+  transition: transform 0.6s ease 0.4s;
+}
+.section-header.anim-visible h2::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* --- Hover suave nos cards de serviço (reforço) --- */
+.service-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+}
+.service-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.13) !important;
+}
+
+/* --- Hover nos contact-cards --- */
+.contact-card {
+  transition: transform 0.35s ease, background 0.35s ease !important;
+}
+
+/* --- Feature boxes hero com entrada escalonada --- */
+.feature-box {
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.feature-box:hover {
+  transform: translateY(-6px) scale(1.04);
+  background: rgba(255,255,255,0.18);
+}
+
+/* --- Highlight items da antena --- */
+.highlight-item {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.highlight-item.anim-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- Contador animado nos stat cards do painel (futuro uso) --- */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* --- Smooth reveal para booking card --- */
+.booking-card,
+.my-bookings {
+  transition: box-shadow 0.3s ease;
+}
+.booking-card:hover,
+.my-bookings:hover {
+  box-shadow: 0 10px 35px rgba(0,0,0,0.12) !important;
+}
+
+/* --- Respeitar preferências de movimento reduzido (acessibilidade) --- */
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-up,
+  .anim-fade-left,
+  .anim-fade-right,
+  .anim-zoom-in,
+  .anim-fade-in,
+  .highlight-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

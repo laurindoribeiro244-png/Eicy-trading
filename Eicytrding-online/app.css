@@ -1,0 +1,398 @@
+/* ============================================
+   APP.CSS — Eicy Trading: Novas Funcionalidades
+   Sistema de Auth, Agendamento, Painel ADM
+   ============================================ */
+
+/* --- Botão de Conta no Header --- */
+.btn-account {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 8px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+.btn-account:hover {
+  background: var(--yellow);
+  color: var(--primary-blue);
+  border-color: var(--yellow);
+}
+
+/* --- Secção de Agendamento --- */
+.booking-section {
+  padding: 80px 0;
+  background: var(--gray-50);
+}
+.booking-wrapper {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .booking-wrapper { grid-template-columns: 1fr; }
+}
+.booking-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  border: 1px solid #dbeafe;
+}
+.booking-prompt {
+  text-align: center;
+  padding: 30px 10px;
+}
+.booking-prompt .prompt-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.booking-prompt h3 {
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+.booking-prompt p {
+  color: var(--gray-600);
+  margin-bottom: 25px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+@media (max-width: 600px) {
+  .form-grid { grid-template-columns: 1fr; }
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+.form-group label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 11px 14px;
+  border: 1.5px solid #dbeafe;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--gray-900);
+  background: var(--white);
+  transition: border 0.2s;
+  font-family: inherit;
+  width: 100%;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--light-blue);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+}
+.btn-block {
+  width: 100%;
+  text-align: center;
+}
+
+/* --- Meus Agendamentos (lateral) --- */
+.my-bookings {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  border: 1px solid #dbeafe;
+}
+.my-bookings h3 {
+  color: var(--primary-blue);
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #dbeafe;
+}
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.booking-item {
+  background: #eff6ff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--light-blue);
+}
+.booking-item.status-confirmado { border-left-color: #10b981; }
+.booking-item.status-pendente { border-left-color: var(--yellow); }
+.booking-item.status-cancelado { border-left-color: #ef4444; }
+.booking-item .b-service {
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+.booking-item .b-meta {
+  font-size: 0.82rem;
+  color: var(--gray-600);
+  margin-bottom: 6px;
+}
+.booking-item .b-status {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.b-status.pendente { background: #fef3c7; color: #92400e; }
+.b-status.confirmado { background: #d1fae5; color: #065f46; }
+.b-status.cancelado { background: #fee2e2; color: #991b1b; }
+.empty-state {
+  text-align: center;
+  color: var(--gray-600);
+  padding: 20px;
+  font-style: italic;
+}
+
+/* --- Contact Form Card --- */
+.contact-form-card {
+  text-align: left !important;
+}
+.contact-form-card h3 {
+  margin-bottom: 18px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: var(--white);
+  font-size: 0.95rem;
+  font-family: inherit;
+  width: 100%;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--yellow);
+}
+
+/* --- Modal Base --- */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(4,13,33,0.75);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+.modal-overlay.open {
+  display: flex;
+}
+.modal-box {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 35px;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalIn 0.25s ease;
+}
+.modal-large {
+  max-width: 640px;
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(-20px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--gray-600);
+  padding: 5px;
+  line-height: 1;
+}
+.modal-close:hover { color: var(--gray-900); }
+
+/* --- Auth Modal --- */
+.modal-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 28px;
+  border-bottom: 2px solid #dbeafe;
+}
+.modal-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--gray-600);
+  transition: all 0.2s;
+  position: relative;
+}
+.modal-tab.active {
+  color: var(--primary-blue);
+}
+.modal-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-blue);
+}
+.modal-form h2 {
+  font-size: 1.6rem;
+  color: var(--primary-blue);
+  margin-bottom: 6px;
+}
+.modal-sub {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+.form-error {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  margin-bottom: 14px;
+}
+.modal-link {
+  text-align: center;
+  margin-top: 18px;
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+.modal-link a {
+  color: var(--primary-blue);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* --- User Panel --- */
+.user-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #dbeafe;
+}
+.user-avatar {
+  width: 52px;
+  height: 52px;
+  background: var(--primary-blue);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.user-panel-header h2 {
+  font-size: 1.2rem;
+  color: var(--primary-blue);
+  margin: 0;
+}
+.user-panel-header p {
+  color: var(--gray-600);
+  font-size: 0.88rem;
+  margin: 0;
+}
+.btn-logout {
+  margin-left: auto;
+  background: #fee2e2;
+  color: #991b1b;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+.btn-logout:hover { background: #fecaca; }
+.panel-section-title {
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+.bookings-list-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* --- Toast --- */
+.toast {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-blue);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  z-index: 9999;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  animation: toastIn 0.3s ease;
+}
+.toast.success { background: #10b981; }
+.toast.error { background: #ef4444; }
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* --- Spinner --- */
+.btn-loading {
+  opacity: 0.7;
+  pointer-events: none;
+}

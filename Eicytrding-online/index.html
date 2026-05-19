@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eicy Trading - Soluções Profissionais</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="animation.css" />
+  </head>
+  <body> 
+    <!-- cabecalho -->
+    <header id="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo-area">
+            <div class="logo-circle">
+              <span><img src="icones/LOGOOOOOOOOOOOLLLLLL.png" alt="Eicy" /></span>
+            </div>
+            <div>
+              <h1>Eicy Trading</h1>
+              <p class="tagline">Soluções rapidas no local</p>
+            </div>
+          </div>
+
+          <nav class="desktop-menu">
+            <a href="#home" class="nav-link active">Início</a>
+            <a href="#servicos" class="nav-link">Serviços</a>
+            <a href="#agendar" class="nav-link">Agendar</a>
+            <a href="#sobre" class="nav-link">Sobre</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+            <button class="btn-account" id="btnAccount" onclick="abrirModalAuth()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              <span id="accountLabel">Minha Conta</span>
+            </button>
+          </nav>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+
+        <nav class="mobile-menu" id="mobileMenu">
+          <a href="#home" class="nav-link">Início</a>
+          <a href="#servicos" class="nav-link">Serviços</a>
+          <a href="#agendar" class="nav-link">Agendar</a>
+          <a href="#sobre" class="nav-link">Sobre</a>
+          <a href="#contacto" class="nav-link">Contacto</a>
+          <a href="#" class="nav-link" onclick="abrirModalAuth()">Minha Conta</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2 class="hero-title">Conserte <span class="highlight">Connosco</span></h2>
+          <p class="hero-subtitle">Atendimento rápido, seguro e com garantia!</p>
+          <div class="hero-buttons">
+            <a href="#agendar" class="btn btn-primary">Agendar Serviço ›</a>
+            <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
+          </div>
+          <div class="features-grid">
+            <div class="feature-box">
+              <div class="feature-icon"><img src="icones/ico-reparacoes.png" alt="" /></div>
+              <p>Reparações</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon"><img src="icones/ico-softwares.png" alt="" /></div>
+              <p>Software</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon"><img src="icones/ico-reprografia.png" alt="" /></div>
+              <p>Reprografia</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon"><img src="icones/ico-design_grafico.png" alt="" /></div>
+              <p>Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="services services-v2">
+      <div class="container">
+        <div class="section-header anim-fade-up">
+          <h2>Nossos Serviços</h2>
+          <p>Soluções completas e profissionais, directo até si — rápido, eficiente e de confiança</p>
+        </div>
+        <div class="services-img-grid">
+
+          <!-- Card 1 -->
+          <div class="svc-img-card anim-fade-up anim-delay-1">
+            <div class="svc-img-wrap">
+              <img src="img/Foto-manutencao_De_software.jpg" alt="Manutenção de Software" />
+              <div class="svc-img-overlay">
+                <div class="svc-overlay-icon"> <img src="icones/ico-softwares.png" alt=""> </div>
+                <p>Instalação de sistemas, drivers e muito mais</p>
+                <a href="#agendar" class="svc-cta-btn">Agendar agora</a>
+              </div>
+            </div>
+            <div class="svc-img-info">
+              <span class="svc-tag">Software</span>
+              <h3>Manutenção de Software</h3>
+              <p>Instalamos e configuramos Windows, drivers e programas essenciais para o seu computador funcionar na perfeição.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="svc-img-card anim-fade-up anim-delay-2">
+            <div class="svc-img-wrap">
+              <img src="img/montage e repáracao.jpg" alt="Montagem e Reparação" />
+              <div class="svc-img-overlay">
+                <div class="svc-overlay-icon"><img src="icones/ico-reparacoes.png" alt=""></div>
+                <p>Antenas parabólicas DStv, Zap e muito mais</p>
+                <a href="#agendar" class="svc-cta-btn">Agendar agora</a>
+              </div>
+            </div>
+            <div class="svc-img-info">
+              <span class="svc-tag">Reparação</span>
+              <h3>Montagem e Reparação</h3>
+              <p>Instalação e reparação de antenas parabólicas, televisões e equipamentos electrónicos em geral.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="svc-img-card anim-fade-up anim-delay-3">
+            <div class="svc-img-wrap">
+              <img src="img/foto-Reprografia.jpg" alt="Reprografia" />
+              <div class="svc-img-overlay">
+                <div class="svc-overlay-icon"><img src="icones/ico-reprografia.png" alt=""></div>
+                <p>Impressão, cópia, scan e encadernação</p>
+                <a href="#agendar" class="svc-cta-btn">Agendar agora</a>
+              </div>
+            </div>
+            <div class="svc-img-info">
+              <span class="svc-tag">Reprografia</span>
+              <h3>Serviços de Reprografia</h3>
+              <p>Cópias, impressão, scan, encadernação, emplastificação e edição de trabalhos académicos e profissionais.</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="svc-img-card anim-fade-up anim-delay-4">
+            <div class="svc-img-wrap">
+              <img src="img/Foto_Design_grafico.jpg" alt="Design Gráfico" />
+              <div class="svc-img-overlay">
+                <div class="svc-overlay-icon"><img src="icones/ico-design_grafico.png" alt=""></div>
+                <p>Cartazes, banners, cartões e posts sociais</p>
+                <a href="#agendar" class="svc-cta-btn">Agendar agora</a>
+              </div>
+            </div>
+            <div class="svc-img-info">
+              <span class="svc-tag">Design</span>
+              <h3>Design Gráfico</h3>
+              <p>Criamos cartazes, banners, cartões de visita e conteúdo visual para redes sociais com identidade profissional.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Antenna — Nova Secção com Carrossel -->
+    <section class="antenna-modern">
+
+      <!-- Carrossel de fundo -->
+      <div class="ant-carousel">
+        <div class="ant-slide ant-slide-1 active"></div>
+        <div class="ant-slide ant-slide-2"></div>
+        <div class="ant-slide ant-slide-3"></div>
+        <div class="ant-slide ant-slide-4"></div>
+        <div class="ant-overlay"></div>
+      </div>
+
+      <!-- Conteúdo sobreposto -->
+      <div class="container ant-content">
+
+        <!-- Coluna esquerda: badge + título + features -->
+        <div class="ant-left">
+          <span class="ant-badge">
+            <img src="img/antenas_parabolicas.jpg" alt="" class="ant-badge-icon" />
+            Damos apoio tecnico para antenas parabolicas
+          </span>
+          <h2 class="ant-title">
+            Sinal fraco?<br>
+            <span class="ant-title-accent">Nós resolvemos!</span>
+          </h2>
+          <p class="ant-desc">Diagnóstico rápido e solução no local — DStv, Zap, StarTimes e muito mais.</p>
+
+          <ul class="ant-features">
+            <li><span class="ant-check">✓</span> Instalação e reinstalação</li>
+            <li><span class="ant-check">✓</span> Alinhamento de sinal</li>
+            <li><span class="ant-check">✓</span> Troca de cabos e conectores</li>
+            <li><span class="ant-check">✓</span> Manutenção e reparos em geral</li>
+            <li><span class="ant-check">✓</span> Diagnóstico rápido no local</li>
+          </ul>
+
+          <a href="#agendar" class="ant-cta-btn">Agendar Agora →</a>
+        </div>
+
+        <!-- Coluna direita: card flutuante com contador de slides -->
+        <div class="ant-right">
+          <div class="ant-info-card">
+            <div class="ant-info-icon"><img src="img/antenas_parabolicas-Photoroom.png" alt=""></div>
+            <p class="ant-info-label">Atendimento</p>
+            <p class="ant-info-value">Rápido &amp; Garantido</p>
+            <hr class="ant-divider" />
+            <p class="ant-info-label">Área de cobertura</p>
+            <p class="ant-info-value">Quelimane &amp; região</p>
+            <hr class="ant-divider" />
+            <a href="https://wa.me/258867034765" class="ant-whatsapp-btn" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Contacte-nos no WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dots de navegação do carrossel -->
+      <div class="ant-dots">
+        <button class="ant-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="ant-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="ant-dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="ant-dot" data-slide="3" aria-label="Slide 4"></button>
+      </div>
+
+    </section>
+
+    <!-- ===== NOVA SECÇÃO: AGENDAMENTO ===== -->
+    <section id="agendar" class="booking-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Agendar Serviço</h2>
+          <p>Escolha o serviço, data e hora e nós iremos até si</p>
+        </div>
+        <div class="booking-wrapper">
+          <div class="booking-card" id="bookingCard">
+            <!-- Estado não logado -->
+            <div id="bookingLoginPrompt" class="booking-prompt" style="display:none;">
+              <div class="prompt-icon"><img src="icones/icone-chave.png" alt=""></div>
+              <h3>Entre na sua conta para agendar</h3>
+              <p>É necessário estar logado para fazer agendamentos e acompanhar o seu pedido.</p>
+              <button class="btn btn-primary" onclick="abrirModalAuth()">Fazer Login / Cadastrar</button>
+            </div>
+            <!-- Formulário de agendamento -->
+            <div id="bookingForm">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Categoria de Serviço</label>
+                  <select id="bookingCategory" onchange="atualizarServicos()">
+                    <option value="">Selecione a categoria...</option>
+                    <option value="Software">Manutenção de Software</option>
+                    <option value="Montagem">Montagem e Reparação</option>
+                    <option value="Reprografia">Reprografia</option>
+                    <option value="Design">Design Gráfico</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Serviço Específico</label>
+                  <select id="bookingService">
+                    <option value="">Primeiro selecione a categoria...</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Data da Visita</label>
+                  <input type="date" id="bookingDate" min="" />
+                </div>
+                <div class="form-group">
+                  <label>Hora Preferida</label>
+                  <select id="bookingTime">
+                    <option value="08:00">08:00</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="14:00">14:00</option>
+                    <option value="15:00">15:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="17:00">17:00</option>
+                  </select>
+                </div>
+                <div class="form-group full-width">
+                  <label>Endereço / Localização</label>
+                  <input type="text" id="bookingAddress" placeholder="Ex: Bairro Central, Rua 5, Casa 12" />
+                </div>
+                <div class="form-group full-width">
+                  <label>Observações (opcional)</label>
+                  <textarea id="bookingNotes" placeholder="Descreva o problema ou detalhes adicionais..." rows="3"></textarea>
+                </div>
+              </div>
+              <button class="btn btn-primary btn-block" onclick="submeterAgendamento()">
+                 Confirmar Agendamento
+              </button>
+            </div>
+          </div>
+
+          <!-- Meus Agendamentos -->
+          <div class="my-bookings" id="myBookings" style="display:none;">
+            <h3>Meus Agendamentos</h3>
+            <div id="bookingsList" class="bookings-list">
+              <p class="empty-state">Sem agendamentos ainda.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECÇÃO SOBRE — VERSÃO MODERNA ===== -->
+    <section id="sobre" class="about-modern">
+      <div class="about-bg-shape"></div>
+      <div class="container">
+
+        <!-- Cabeçalho da secção -->
+        <div class="about-header anim-fade-up">
+          <span class="about-eyebrow">Quem Somos</span>
+          <h2 class="about-title">Sobre a <span class="about-title-accent">Eicy Trading</span></h2>
+          <div class="about-divider"></div>
+        </div>
+
+        <!-- Grid principal -->
+        <div class="about-grid">
+
+          <!-- Coluna esquerda — texto + valores -->
+          <div class="about-text-col anim-fade-up">
+            <p class="about-lead">
+              Somos uma empresa especializada em <strong>soluções técnicas</strong>, design gráfico e serviços de reprografia, com sede em Quelimane, Moçambique.
+            </p>
+            <p class="about-body">
+              Com anos de experiência no mercado, oferecemos atendimento de qualidade, garantia nos serviços e profissionalismo em cada detalhe. A nossa equipa está preparada para resolver as suas necessidades com rapidez e eficiência, sempre com foco total na satisfação do cliente.
+            </p>
+
+            <div class="about-values">
+              <div class="about-value-item">
+                <div class="about-value-icon">⚡</div>
+                <div>
+                  <h4>Rapidez</h4>
+                  <p>Atendimento rápido e eficiente no local</p>
+                </div>
+              </div>
+              <div class="about-value-item">
+                <div class="about-value-icon">🛡️</div>
+                <div>
+                  <h4>Garantia</h4>
+                  <p>Todos os serviços com garantia de qualidade</p>
+                </div>
+              </div>
+              <div class="about-value-item">
+                <div class="about-value-icon">🎯</div>
+                <div>
+                  <h4>Profissionalismo</h4>
+                  <p>Equipa qualificada e dedicada ao cliente</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#agendar" class="about-cta-btn">Agendar um Serviço →</a>
+          </div>
+
+          <!-- Coluna direita — estatísticas + badge -->
+          <div class="about-stats-col anim-fade-up">
+            <div class="about-stats-card">
+              <div class="about-stats-grid">
+                <div class="about-stat">
+                  <span class="about-stat-number">500+</span>
+                  <span class="about-stat-label">Clientes Atendidos</span>
+                </div>
+                <div class="about-stat">
+                  <span class="about-stat-number">4</span>
+                  <span class="about-stat-label">Áreas de Serviço</span>
+                </div>
+                <div class="about-stat">
+                  <span class="about-stat-number">100%</span>
+                  <span class="about-stat-label">Satisfação Garantida</span>
+                </div>
+                <div class="about-stat">
+                  <span class="about-stat-number">24h</span>
+                  <span class="about-stat-label">Resposta Rápida</span>
+                </div>
+              </div>
+              <div class="about-card-footer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Empresa registada e de confiança em Quelimane
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALERIA DE SERVIÇOS — CARROSSEL VISUAL ===== -->
+    <section class="gallery-section">
+      <div class="gallery-header anim-fade-up">
+        <span class="gallery-eyebrow">Nosso Trabalho</span>
+        <h2 class="gallery-title">Galeria de <span class="gallery-title-accent">Serviços</span></h2>
+        <p class="gallery-subtitle">Veja alguns dos trabalhos realizados pela nossa equipa</p>
+      </div>
+
+      <!-- Carrossel principal -->
+      <div class="gallery-carousel-wrap" id="galleryCarousel">
+        <div class="gallery-track" id="galleryTrack">
+
+          <!-- Slide 1 — placeholder (substitua src pelas suas fotos) -->
+          <div class="gallery-slide">
+            <div class="gallery-img-wrap">
+              <img src="img/Foto-manutencao_De_software.jpg" alt="Manutenção de Software" />
+              <div class="gallery-slide-overlay">
+                <span class="gallery-tag">Software</span>
+                <p class="gallery-caption">Manutenção de Software</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="gallery-slide">
+            <div class="gallery-img-wrap">
+              <img src="img/montage e repáracao.jpg" alt="Montagem e Reparação" />
+              <div class="gallery-slide-overlay">
+                <span class="gallery-tag">Reparação</span>
+                <p class="gallery-caption">Montagem e Reparação</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="gallery-slide">
+            <div class="gallery-img-wrap">
+              <img src="img/foto-Reprografia.jpg" alt="Reprografia" />
+              <div class="gallery-slide-overlay">
+                <span class="gallery-tag">Reprografia</span>
+                <p class="gallery-caption">Serviços de Reprografia</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="gallery-slide">
+            <div class="gallery-img-wrap">
+              <img src="img/Foto_Design_grafico.jpg" alt="Design Gráfico" />
+              <div class="gallery-slide-overlay">
+                <span class="gallery-tag">Design</span>
+                <p class="gallery-caption">Design Gráfico</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="gallery-slide">
+            <div class="gallery-img-wrap">
+              <img src="img/antenas_parabolicas.jpg" alt="Antenas Parabólicas" />
+              <div class="gallery-slide-overlay">
+                <span class="gallery-tag">Antenas</span>
+                <p class="gallery-caption">Antenas Parabólicas</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 6 — placeholder para nova foto -->
+          
+
+        </div>
+
+        <!-- Botões de navegação -->
+        <button class="gallery-btn gallery-btn-prev" id="galleryPrev" aria-label="Anterior">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="gallery-btn gallery-btn-next" id="galleryNext" aria-label="Próximo">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+
+      <!-- Dots e contador -->
+      <div class="gallery-footer">
+        <div class="gallery-dots" id="galleryDots"></div>
+        <span class="gallery-counter"><span id="galleryCurrentNum">1</span> / <span id="galleryTotalNum">5</span></span>
+      </div>
+    </section>
+
+    <!-- Contactos -->
+    <section id="contacto" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Entre em Contacto</h2>
+          <p>Estamos prontos para atendê-lo</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon"><img src="icones/ico-contacte.png" alt="" /></div>
+            <h3>Telefone/WhatsApp</h3>
+            <p>+258 86 703 4765</p>
+            <p>+258 86 703 4765</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><img src="icones/ico-localizacao.png" alt="" /></div>
+            <h3>Localização</h3>
+            <p>Quelimane</p>
+            <p>Moçambique</p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><img src="icones/ico-redes_sociais.png" alt="" /></div>
+            <h3>Redes Sociais</h3>
+            <p>Facebook: Eicy Trading</p>
+            <p>Instagram: @Eicy Trading</p>
+            <p>TikTok: @Eicy Trading</p>
+          </div>
+          <div class="contact-card contact-form-card">
+            <h3>Envie uma Mensagem</h3>
+            <div class="contact-form">
+              <input type="text" id="contactName" placeholder="Nome" />
+              <input type="email" id="contactEmail" placeholder="Email" />
+              <input type="text" id="contactSubject" placeholder="Assunto" />
+              <textarea id="contactMessage" placeholder="Mensagem" rows="3"></textarea>
+              <button class="btn btn-primary btn-block" onclick="enviarContacto()">Enviar Mensagem</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="social-links">
+          <a href="https://facebook.com/eicytrading" target="_blank" class="social-icon facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://instagram.com/eicytrading" target="_blank" class="social-icon instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/258867034765" target="_blank" class="social-icon whatsapp">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+        <p class="copyright">© 2026 Eicy Trading. Todos os direitos reservados.</p>
+        <p class="footer-text">Atendimento rápido, seguro e com garantia!</p>
+      </div>
+    </footer>
+
+    <a href="https://wa.me/258867034765" target="_blank" class="whatsapp-float" title="Fale conosco no WhatsApp">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+
+    <!-- ===== MODAL DE AUTENTICAÇÃO ===== -->
+    <div class="modal-overlay" id="authModal" onclick="fecharModalSeClicouFora(event)">
+      <div class="modal-box">
+        <button class="modal-close" onclick="fecharModalAuth()">✕</button>
+        <div class="modal-tabs">
+          <button class="modal-tab active" id="tabLogin" onclick="trocarTab('login')">Entrar</button>
+          <button class="modal-tab" id="tabRegister" onclick="trocarTab('register')">Cadastrar</button>
+        </div>
+
+        <!-- Login -->
+        <div id="formLogin" class="modal-form">
+          <h2>Bem-vindo de volta</h2>
+          <p class="modal-sub">Entre na sua conta para gerir os seus agendamentos</p>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="loginEmail" placeholder="seu@email.com" />
+          </div>
+          <div class="form-group">
+            <label>Senha</label>
+            <input type="password" id="loginPassword" placeholder="••••••••" />
+          </div>
+          <div id="loginError" class="form-error" style="display:none;"></div>
+          <button class="btn btn-primary btn-block" onclick="fazerLogin()">Entrar</button>
+          <p class="modal-link">Não tem conta? <a onclick="trocarTab('register')">Cadastre-se</a></p>
+        </div>
+
+        <!-- Register -->
+        <div id="formRegister" class="modal-form" style="display:none;">
+          <h2>Criar Conta</h2>
+          <p class="modal-sub">Cadastre-se para agendar serviços e acompanhar seus pedidos</p>
+          <div class="form-group">
+            <label>Nome Completo</label>
+            <input type="text" id="regName" placeholder="Seu nome completo" />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="regEmail" placeholder="seu@email.com" />
+          </div>
+          <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" id="regPhone" placeholder="+258 87 000 0000" />
+          </div>
+          <div class="form-group">
+            <label>Senha</label>
+            <input type="password" id="regPassword" placeholder="Mínimo 6 caracteres" />
+          </div>
+          <div id="registerError" class="form-error" style="display:none;"></div>
+          <button class="btn btn-primary btn-block" onclick="fazerCadastro()">Criar Conta</button>
+          <p class="modal-link">Já tem conta? <a onclick="trocarTab('login')">Entre aqui</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MODAL PAINEL DO UTILIZADOR ===== -->
+    <div class="modal-overlay" id="userPanel" onclick="fecharPainelSeClicouFora(event)">
+      <div class="modal-box modal-large">
+        <button class="modal-close" onclick="fecharPainelUtilizador()">✕</button>
+        <div class="user-panel-header">
+          <div class="user-avatar" id="userAvatar">U</div>
+          <div>
+            <h2 id="userPanelName">Utilizador</h2>
+            <p id="userPanelEmail">email@exemplo.com</p>
+          </div>
+          <button class="btn-logout" onclick="fazerLogout()">Sair</button>
+        </div>
+        <h3 class="panel-section-title">Meus Agendamentos</h3>
+        <div id="panelBookingsList" class="bookings-list-panel">
+          <p class="empty-state">Carregando...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast de notificação -->
+    <div id="toast" class="toast" style="display:none;"></div>
+
+    <script src="script.js"></script>
+    <script>
+      /* ===== Galeria de Serviços — Carrossel ===== */
+      (function(){
+        const track    = document.getElementById('galleryTrack');
+        const slides   = track ? track.querySelectorAll('.gallery-slide') : [];
+        const dotsWrap = document.getElementById('galleryDots');
+        const prevBtn  = document.getElementById('galleryPrev');
+        const nextBtn  = document.getElementById('galleryNext');
+        const curNum   = document.getElementById('galleryCurrentNum');
+        const totNum   = document.getElementById('galleryTotalNum');
+        if (!track || slides.length === 0) return;
+
+        let current = 0;
+        let visibleCount = window.innerWidth >= 900 ? 3 : window.innerWidth >= 600 ? 2 : 1;
+        let autoTimer;
+
+        const total = slides.length;
+        if(totNum) totNum.textContent = total;
+
+        // Criar dots
+        slides.forEach((_, i) => {
+          const dot = document.createElement('button');
+          dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Slide ' + (i+1));
+          dot.addEventListener('click', () => { goTo(i); resetAuto(); });
+          dotsWrap.appendChild(dot);
+        });
+
+        function updateVisible() {
+          visibleCount = window.innerWidth >= 900 ? 3 : window.innerWidth >= 600 ? 2 : 1;
+        }
+
+        function getSlideWidth() {
+          return track.parentElement.offsetWidth / visibleCount;
+        }
+
+        function setSlideWidths() {
+          const w = getSlideWidth();
+          slides.forEach(s => { s.style.minWidth = w + 'px'; s.style.maxWidth = w + 'px'; });
+        }
+
+        function goTo(n) {
+          const maxIndex = total - visibleCount;
+          current = Math.max(0, Math.min(n, maxIndex));
+          const offset = current * getSlideWidth();
+          track.style.transform = 'translateX(-' + offset + 'px)';
+          // update dots
+          dotsWrap.querySelectorAll('.gallery-dot').forEach((d, i) => {
+            d.classList.toggle('active', i === current);
+          });
+          if(curNum) curNum.textContent = current + 1;
+        }
+
+        function next() { goTo(current + 1 > total - visibleCount ? 0 : current + 1); }
+        function prev() { goTo(current - 1 < 0 ? total - visibleCount : current - 1); }
+
+        function startAuto() { autoTimer = setInterval(next, 4000); }
+        function resetAuto()  { clearInterval(autoTimer); startAuto(); }
+
+        if(prevBtn) prevBtn.addEventListener('click', () => { prev(); resetAuto(); });
+        if(nextBtn) nextBtn.addEventListener('click', () => { next(); resetAuto(); });
+
+        // touch swipe
+        let touchStartX = 0;
+        track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, {passive:true});
+        track.addEventListener('touchend', e => {
+          const diff = touchStartX - e.changedTouches[0].clientX;
+          if(Math.abs(diff) > 50) { diff > 0 ? next() : prev(); resetAuto(); }
+        }, {passive:true});
+
+        window.addEventListener('resize', () => {
+          updateVisible();
+          setSlideWidths();
+          goTo(current);
+        });
+
+        setSlideWidths();
+        goTo(0);
+        startAuto();
+      })();
+    </script>
+    <script>
+      /* ===== Carrossel Antenas ===== */
+      (function(){
+        const slides = document.querySelectorAll('.ant-slide');
+        const dots   = document.querySelectorAll('.ant-dot');
+        let current  = 0;
+        let timer;
+        function goTo(n) {
+          slides[current].classList.remove('active');
+          dots[current].classList.remove('active');
+          current = (n + slides.length) % slides.length;
+          slides[current].classList.add('active');
+          dots[current].classList.add('active');
+        }
+        function next() { goTo(current + 1); }
+        function startAuto() { timer = setInterval(next, 4500); }
+        function stopAuto()  { clearInterval(timer); }
+        dots.forEach(dot => {
+          dot.addEventListener('click', function(){
+            stopAuto();
+            goTo(parseInt(this.dataset.slide));
+            startAuto();
+          });
+        });
+        startAuto();
+      })();
+    </script>
+  </body>
+</html>
